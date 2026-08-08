@@ -1,0 +1,216 @@
+/* 🌌 星際大戰深邃宇宙與控制艙背景 */
+body {
+  margin: 0;
+  background-color: #05070f; /* 鈦戰機幽冥深黑 */
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+  background-size: 550px 550px, 350px 350px;
+  background-position: 0 0, 40px 60px;
+  color: #c8d3f6;
+  font-family: 'Courier New', Courier, monospace, system-ui; /* 科幻終端機字體 */
+}
+
+/* 🚀 右側主內容區 - 控制艙螢幕外框 */
+.main-content {
+  padding: 40px 20px;
+  width: 95%;
+  margin: 10px auto;
+  background: rgba(10, 15, 30, 0.85); /* 帝國指揮艙護盾 */
+  border: 2px solid #1e2640;
+  border-radius: 16px;
+  box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.15), 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+/* 🏢 絕地聖殿橫向置頂導覽列 */
+.navbar-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(13, 18, 35, 0.95); /* */
+  
+  /* 🚀 調整 1：將左右內邊距稍微加寬，讓放大後的 Logo 與按鈕在兩端有更開闊的視覺 */
+  padding: 0 40px; 
+  
+  /* 🚀 調整 2：字體放大後，將導覽列高度從 75px 調高至 85px，看起來更大器 */
+  height: 85px; 
+  
+  border-bottom: 2px solid #a855f7; /* */
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); /* */
+  position: sticky; /* */
+  top: 0; /* */
+  z-index: 1000; /* */
+  backdrop-filter: blur(8px); /* */
+}
+
+/* 🎓 達斯維達與反抗軍 Logo 區域 */
+.navbar-logo-zone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 🎓 左側 Logo 區域 */
+.navbar-logo-text {
+  /* 🎯 字體放大：Logo 從 24px 放大到 28px */
+  font-size: 28px; 
+  font-weight: 900; /* */
+  color: #ffffff; /* */
+  text-transform: uppercase; /* */
+  letter-spacing: 2px; /* */
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 20px rgba(168, 85, 247, 0.5); /* */
+}
+
+/* ➔ 中央導覽儀表選單 */
+.navbar-menu-links {
+  display: flex; /* */
+  align-items: center; /* */
+  
+  /* 🎯 間距加大：分頁按鈕之間的距離拉開，配合大螢幕的舒展感 */
+  gap: 20px; 
+  height: 100%; /* */
+}
+
+.navbar-link-item {
+  display: flex; /* */
+  align-items: center; /* */
+  gap: 8px; /* */
+  
+  /* 🎯 按鈕變大：上下左右加厚，點擊範圍和方框感覺更紮實 */
+  padding: 10px 22px; 
+  
+  color: #7080b0; /* */
+  text-decoration: none; /* */
+  
+  /* 🎯 字體放大：分頁選單字體從 14px 放大到 16px */
+  font-size: 16px; 
+  
+  font-weight: bold; /* */
+  text-transform: uppercase; /* */
+  letter-spacing: 1px; /* */
+  border: 1px solid transparent; /* */
+  border-radius: 6px; /* */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* */
+}
+
+/* 懸浮：光劍充能粒子閃爍 */
+.navbar-link-item:hover {
+  color: #00f2fe;
+  background: rgba(0, 242, 254, 0.05);
+  border-color: rgba(0, 242, 254, 0.3);
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+}
+
+/* 🌟 當前作用中（Active Tab）：紫色光劍100%能量完全體爆發 */
+.navbar-link-item.active-top-tab {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  color: #ffffff !important;
+  border-color: #a855f7 !important;
+  text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
+  box-shadow: inset 0 0 8px rgba(168, 85, 247, 0.5), 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+/* 👤 右側死星雷達身分卡區塊 */
+.navbar-right-zone {
+  display: flex; /* */
+  align-items: center; /* */
+  
+  /* 🎯 間距拉開：身分卡與登出鈕的距離 */
+  gap: 20px; 
+  white-space: nowrap; /* */
+  flex-shrink: 0; /* */
+}
+
+.navbar-user-badge-card {
+  background-color: #090d1a; /* */
+  border-radius: 8px; /* */
+  
+  /* 🎯 身分卡放大：內邊距加厚 */
+  padding: 8px 18px; 
+  
+  display: flex; /* */
+  align-items: center; /* */
+  gap: 12px; /* */
+  border: 1px solid #1e2640; /* */
+  box-shadow: inset 0 0 10px rgba(0, 242, 254, 0.05); /* */
+}
+
+.user-badge-avatar {
+  background-color: rgba(0, 242, 254, 0.1);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00f2fe;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
+.user-badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-badge-name {
+  /* 🎯 字體放大：管理員名稱從 13px 放大到 15px */
+  font-size: 15px; 
+  font-weight: bold; /* */
+  color: #ffffff; /* */
+  letter-spacing: 0.5px; /* */
+}
+
+.user-badge-status {
+  /* 🎯 字體放大：ONLINE // ADMIN 稍微大一點點 */
+  font-size: 12px; 
+  font-weight: 800; /* */
+  text-transform: uppercase; /* */
+  margin-top: 1px; /* */
+}
+
+.status-online { 
+  color: #00ff88; 
+  text-shadow: 0 0 6px #00ff88;
+}
+.status-offline { 
+  color: #ff0055; 
+  text-shadow: 0 0 6px #ff0055;
+}
+
+/* 📥 紅色防衛登出鈕 */
+.navbar-logout-top-btn {
+  display: flex; /* */
+  align-items: center; /* */
+  gap: 6px; /* */
+  background-color: rgba(255, 0, 85, 0.05); /* */
+  color: #ff417b; /* */
+  border: 1px solid rgba(255, 0, 85, 0.3); /* */
+  
+  /* 🎯 按鈕變大：登出鈕加厚 */
+  padding: 10px 20px; 
+  
+  border-radius: 8px; /* */
+  cursor: pointer; /* */
+  
+  /* 🎯 字體放大：登出按鈕文字從 13px 放大到 15px */
+  font-size: 15px; 
+  
+  font-weight: bold; /* */
+  letter-spacing: 1px; /* */
+  text-transform: uppercase; /* */
+  transition: all 0.2s ease; /* */
+}
+
+.navbar-logout-top-btn:hover {
+  background-color: #ff0055;
+  color: #ffffff;
+  border-color: #ff0055;
+  box-shadow: 0 0 15px #ff0055;
+  text-shadow: 0 0 5px #ffffff;
+}
+.navbar-right-zone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap; /* 🎯 強制內容維持在一行 */
+  flex-shrink: 0;      /* 🎯 防止右側區域被壓縮 */
+}

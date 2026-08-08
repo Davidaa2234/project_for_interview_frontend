@@ -1,0 +1,351 @@
+/* ==========================================================================
+   🪐 會員檔案 Profile 抽離專用視覺外掛樣式表
+   ========================================================================== */
+
+/* 🚀 關鍵修改：覆蓋原本將寬度限死在 600px 的設定，解禁為 100% 滿版，與框架同寬 */
+.profile-container-width {
+  max-width: none !important;
+  width: 100%;
+}
+
+/* 關聯卡片相對定位 */
+.sw-profile-card-relative {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 未授權攔截特殊樣式 */
+.sw-card-denied {
+  text-align: center;
+  border-color: #ff0055 !important;
+}
+
+.sw-denied-title {
+  color: #ff0055;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sw-denied-subtitle {
+  color: #7080b0;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* 頂部三種身份的動態光條色調 */
+.profile-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+/* 標題與圖標排版 */
+.profile-title-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.sw-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.sw-card-subtitle {
+  color: #7080b0;
+  font-size: 0.85rem;
+  text-align: left;
+  margin: 0 0 25px 0;
+}
+
+/* 資料矩陣排版 */
+.profile-grid-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.matrix-data-cell {
+  background-color: rgba(9, 13, 26, 0.6);
+  border: 1px solid #161925;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.matrix-data-cell:hover {
+  border-color: rgba(0, 242, 254, 0.3);
+  background-color: rgba(9, 13, 26, 0.9);
+}
+
+.font-span-2 {
+  grid-column: span 2;
+}
+
+.cell-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #00f2fe;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cell-value {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.value-highlight {
+  color: #00ff88;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
+}
+
+.text-purple {
+  color: #c084fc;
+  font-weight: bold;
+}
+
+.font-bio-text {
+  font-size: 0.88rem;
+  color: #c8d3f6;
+  line-height: 1.6;
+  font-family: inherit;
+}
+
+/* 頁尾按鈕排版 */
+.profile-footer-actions {
+  display: flex;
+  justify-content: flex-start;
+  border-top: 1px solid #161925;
+  padding-top: 20px;
+}
+
+.btn-sw-update {
+  background: linear-gradient(135deg, #1e2640 0%, #090d1a 100%) !important;
+  border: 1px solid #3b4260 !important;
+  color: #00f2fe !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn-sw-update:hover {
+  border-color: #00f2fe !important;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* 載入動畫專區 */
+.sw-card-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #7080b0;
+  font-size: 0.9rem;
+  gap: 15px;
+}
+
+.sw-spinner {
+  color: #00f2fe;
+  animation: sw-spin 1.2s linear infinite;
+}
+
+@keyframes sw-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 身份角色標籤與燈條色彩分流 */
+.user-role-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* ADMIN 管理員主題紅 */
+.theme-admin { background-color: #e11d48 !important; }
+.user-role-tag.theme-admin {
+  background: rgba(225, 29, 72, 0.15) !important;
+  color: #e11d48 !important;
+  border: 1px solid rgba(225, 29, 72, 0.3) !important;
+}
+
+/* TEACHER 老師主題紫 */
+.theme-teacher { background-color: #a855f7 !important; }
+.user-role-tag.theme-teacher {
+  background: rgba(168, 85, 247, 0.15) !important;
+  color: #a855f7 !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+}
+
+/* STUDENT 學生主題青 */
+.theme-student { background-color: #00f2fe !important; }
+.user-role-tag.theme-student {
+  background: rgba(0, 242, 254, 0.1) !important;
+  color: #00f2fe !important;
+  border: 1px solid rgba(0, 242, 254, 0.2) !important;
+}
+
+
+/* ==========================================================================
+   🛸 全新追加：專屬星戰雙卡 1:1 並排佈局與發光特效
+   ========================================================================== */
+
+/* 全新大框架 Flex 排版，1:1 等寬分配左右兩塊面板 */
+.profile-cards-flex-wrapper {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch; /* 讓兩張卡片高度強行對齊一致 */
+}
+
+/* 強制左右兩張卡片各分一半寬度 */
+.profile-cards-flex-wrapper > .sw-profile-card-relative {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 星戰角色特權卡專用核心樣式 */
+.starwars-role-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 24px !important;
+}
+
+/* 三種角色的外框霓虹高光 */
+.starwars-role-card.matrix-admin { border-color: rgba(225, 29, 72, 0.4) !important; box-shadow: inset 0 0 20px rgba(225, 29, 72, 0.1), 0 8px 32px rgba(0,0,0,0.5); }
+.starwars-role-card.matrix-teacher { border-color: rgba(168, 85, 247, 0.4) !important; box-shadow: inset 0 0 20px rgba(168, 85, 247, 0.1), 0 8px 32px rgba(0,0,0,0.5); }
+.starwars-role-card.matrix-student { border-color: rgba(0, 242, 254, 0.3) !important; box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.05), 0 8px 32px rgba(0,0,0,0.5); }
+
+/* 卡片上方標題 */
+.role-card-header {
+  text-align: left;
+  margin-top: 15px;
+}
+.role-badge {
+  font-size: 10px;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.badge-admin { background: rgba(225, 29, 72, 0.15); color: #e11d48; border: 1px solid rgba(225, 29, 72, 0.3); }
+.badge-teacher { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3); }
+.badge-student { background: rgba(0, 242, 254, 0.1); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.2); }
+
+.role-main-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 12px 0 0 0;
+  letter-spacing: 1px;
+}
+
+/* 🎯 大頭照相框排版與圖片裁切 */
+.role-card-body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 25px 0;
+  flex-grow: 1;
+}
+
+.starwars-avatar-frame {
+  width: 450px;
+  height: 450px;
+  background: #02040a;
+  border: 2px solid #1e2640;
+  border-radius: 16px;
+  overflow: hidden; /* 確保圖片不爆出框框 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.starwars-avatar-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🎯 關鍵：等比例縮放裁切圖片，絕不變形歪斜 */
+}
+
+/* 各頭像的專屬光暈 */
+.glow-admin { border-color: #e11d48 !important; box-shadow: 0 0 15px rgba(225, 29, 72, 0.5); }
+.glow-teacher { border-color: #a855f7 !important; box-shadow: 0 0 15px rgba(168, 85, 247, 0.5); }
+.glow-student { border-color: #00f2fe !important; box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); }
+
+/* 🎯 讓文字清單擁有 100% 寬度，靠左對齊，不再受制於圖片寬度 */
+.starwars-privilege-list {
+  width: 100%;               /* 寬度給滿，文字便能完整舒展不換行擠壓 */
+  text-align: left;
+  margin: 0;
+  padding-left: 12px;        /* 預留左側精緻內縮空間 */
+  box-sizing: border-box;
+}
+
+.starwars-privilege-list li {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  list-style-type: none;     /* 移除瀏覽器預設黑點，突顯你的科幻圖標 */
+}
+/* 炫酷的小箭頭圖標 */
+.starwars-privilege-list li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #00f2fe;
+  font-size: 10px;
+  top: 1px;
+}
+.matrix-admin .starwars-privilege-list li::before { color: #e11d48; }
+.matrix-teacher .starwars-privilege-list li::before { color: #a855f7; }
+
+/* 經典星戰台詞底註 */
+.role-card-footer {
+  font-size: 11px;
+  color: #4a5568;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 15px;
+  text-align: left;
+  font-style: italic;
+}
+
+/* 🚀 關鍵修正：強制讓內部元素由上而下垂直排列，徹底釋放文字空間 */
+.role-card-body-vertical {
+  display: flex;
+  flex-direction: column;   /* 轉為垂直方向，文字清單自然掉到圖片下方 */
+  align-items: center;       /* 讓圖片在區塊內水平居中 */
+  gap: 16px;                 /* 圖片與下方文字清單的舒適間距 */
+  width: 100%;               /* 確保容器撐滿右側區塊 */
+  box-sizing: border-box;
+}

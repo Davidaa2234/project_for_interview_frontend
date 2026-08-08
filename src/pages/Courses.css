@@ -1,0 +1,369 @@
+/* ==========================================================================
+   🌌 宇宙暗黑風：課程發布中心 (Courses Management Matrix) 專屬樣式
+   ========================================================================== */
+
+/* 基礎版面容器 */
+.courses-container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.courses-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #ffffff !important;
+}
+
+.courses-subtitle {
+  color: #7080b0;
+  font-size: 13px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #1e2640;
+  padding-bottom: 15px;
+  text-align: center; 
+}
+
+/* ==========================================================================
+   🚀 上半部左右 1:1 Flex 對稱排版
+   ========================================================================== */
+.dc-top-flex-wrapper {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: stretch; /* 強制左右高度完美對齊 */
+  margin-bottom: 35px;
+}
+
+/* 左右卡片基礎共用面板樣式 */
+.dc-panel-box {
+  flex: 1;
+  min-width: 0; 
+  background: rgba(10, 15, 30, 0.6) !important;
+  border: 1px solid rgba(0, 242, 254, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  box-sizing: border-box;
+}
+
+/* 右側發布列表高度限制與精緻滾動條 */
+.dc-scroll-list {
+  max-height: 490px;
+  overflow-y: auto;
+}
+
+/* 右側頂部狀態條 */
+.cosmic-matrix-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed rgba(0, 242, 254, 0.1);
+  padding-bottom: 10px;
+}
+.cosmic-matrix-header-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.dc-counter-badge {
+  font-size: 11px;
+  font-weight: 900;
+  background: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* 📥 創建課程區塊 */
+.create-course-card {
+  margin: 0 !important; 
+  text-align: left;
+}
+
+.cosmic-form-title {
+  color: #00f2fe;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cosmic-form-subtitle {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0 0 20px 0;
+}
+
+.cosmic-input-group {
+  margin-bottom: 16px;
+}
+
+.cosmic-label {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.cosmic-input, .cosmic-select {
+  width: 100%;
+  box-sizing: border-box;
+  background: #05070f !important;
+  border: 1px solid #1e2640 !important;
+  color: #ffffff !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.cosmic-input:focus, .cosmic-select:focus {
+  outline: none;
+  border-color: #00f2fe !important;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+/* 霓虹特效提交按鈕 */
+.btn-create-course-cosmic {
+  width: 100%;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%) !important;
+  color: #05070f !important;
+  font-weight: 800 !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.btn-create-course-cosmic:hover {
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+/* 🗂️ 已發布課程 Grid 矩陣 */
+.cosmic-matrix-container {
+  text-align: left;
+}
+
+.cosmic-matrix-table {
+  border: 1px solid #1e2640;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cosmic-matrix-header {
+  display: grid;
+  background: rgba(0, 242, 254, 0.05);
+  border-bottom: 2px solid rgba(0, 242, 254, 0.15);
+  padding: 14px 16px;
+}
+
+.matrix-header-cell {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cosmic-matrix-row {
+  display: grid;
+  align-items: center;
+  padding: 14px 16px;
+  background: rgba(15, 23, 42, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease;
+}
+
+.cosmic-matrix-row:hover {
+  background: rgba(30, 41, 59, 0.4);
+  box-shadow: inset 4px 0 0 #00f2fe; 
+}
+
+.cell-course-id { color: #64748b; font-family: monospace; font-weight: 600; font-size: 13px; }
+.cell-course-title { color: #f8fafc; font-weight: 700; font-size: 13.5px; }
+.cell-course-teacher { color: #cbd5e1; font-size: 13px; }
+.cell-course-price { color: #00ff88; font-weight: bold; font-size: 13px; }
+
+/* 💥 刪除按鈕 */
+.btn-delete-course-cosmic {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.3) !important;
+  color: #f87171 !important;
+  padding: 4px 10px !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+}
+
+.btn-delete-course-cosmic:hover {
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+
+/* ==========================================================================
+   🔒 下方：資料庫真實選課狀況監控矩陣專用樣式
+   ========================================================================== */
+.dc-bottom-monitor-section {
+  width: 100%;
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.2); 
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.dc-monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.dc-monitor-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.dc-secure-badge {
+  font-size: 10px;
+  color: #a855f7;
+  font-family: monospace;
+  text-shadow: 0 0 5px rgba(168, 85, 247, 0.5);
+  font-weight: bold;
+}
+
+.dc-monitor-subtitle {
+  color: #7080b0;
+  font-size: 12px;
+  margin: 0 0 20px 0;
+}
+
+/* 監控資料實體 Table 表格 */
+.dc-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #1e2640;
+  border-radius: 8px;
+}
+
+.dc-matrix-table-element {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.dc-matrix-table-element th {
+  background-color: #05070f;
+  color: #a855f7; 
+  font-weight: 700;
+  padding: 14px 18px;
+  border-bottom: 2px solid #1e2640;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.dc-matrix-table-element td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #1e2640;
+  color: #cbd5e1;
+  background-color: rgba(9, 13, 26, 0.3);
+}
+
+.dc-matrix-table-element tr:hover td {
+  background-color: rgba(30, 41, 59, 0.3);
+}
+
+.dc-td-id { font-family: monospace; color: #64748b; }
+.dc-td-student { font-weight: bold; color: #ffffff; }
+.dc-td-course { color: #e2e8f0; font-weight: 500; }
+.dc-td-date { font-size: 12px; color: #64748b; }
+
+/* 狀態標籤分流 */
+.dc-status-tag {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.status-ok {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+.status-pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* 📡 載入動態樣式 */
+.dc-loading-text {
+  padding: 20px;
+  color: #00f2fe;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dc-loading-text-center {
+  color: #a855f7;
+  text-align: center;
+  padding: 30px !important;
+}
+.sw-spinner-mini {
+  animation: spin 1s linear infinite;
+}
+
+/* 🛡️ 學生防火牆 */
+.dc-denied-box {
+  border: 1px dashed rgba(239, 68, 68, 0.4) !important;
+  background: rgba(239, 68, 68, 0.02) !important;
+}
+.dc-denied-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.text-red { color: #e11d48; }
+.font-bold { font-weight: bold; }
+.text-muted { color: #7080b0; }
+.text-sm { font-size: 12px; }
+
+/* 動態轉動 */
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

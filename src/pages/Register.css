@@ -1,0 +1,120 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.register-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid #e2e8f0;
+}
+
+.register-title {
+  margin: 0 0 10px 0;
+  color: #0f172a;
+  text-align: center;
+  font-size: 24px;
+}
+
+.register-subtitle {
+  margin: 0 0 25px 0;
+  color: #64748b;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.register-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.register-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.register-input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.register-input:focus {
+  border-color: #2563eb;
+}
+
+/* 🔒 唯讀角色輸入框專用灰色調，彰顯不可修改的防護屬性 */
+.register-input-readonly {
+  background-color: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+  font-weight: bold;
+}
+
+.register-submit-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.register-submit-btn:hover {
+  background-color: #059669;
+}
+
+.register-submit-btn:disabled {
+  background-color: #a7f3d0;
+  cursor: not-allowed;
+}
+
+.register-error-alert {
+  background-color: #fef2f2;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border: 1px solid #fee2e2;
+}
+
+.register-footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #475569;
+}
+
+.register-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,188 @@
+.explore-container {
+  padding: 10px;
+}
+/* ==========================================================================
+   👨‍🏫 講師名冊專屬動態科幻視覺排版
+   ========================================================================== */
+
+.teachers-page-wrapper {
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.explore-title {
+  color: #ffffff;
+  font-size: 26px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px 0;
+}
+
+.explore-subtitle {
+  color: #7080b0;
+  font-size: 13px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #1e2640;
+  padding-bottom: 15px;
+}
+
+/* 網格排版 */
+.teachers-grid-layout {
+  display: grid;
+  grid-templateColumns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* 講師卡片本體 */
+.teacher-cosmic-card {
+  background: rgba(13, 22, 47, 0.4);
+  border: 1px solid #1e2640;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(0, 242, 254, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.teacher-cosmic-card:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 5px 20px rgba(0, 242, 254, 0.1), inset 0 0 15px rgba(0, 242, 254, 0.05);
+  transform: translateY(-2px);
+}
+
+.teacher-card-header {
+  font-size: 17px;
+  font-weight: bold;
+  color: #00f2fe;
+  text-shadow: 0 0 5px rgba(0, 242, 254, 0.4);
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.teacher-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+
+.teacher-info-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c8d3f6;
+  font-size: 13.5px;
+}
+
+.info-icon {
+  color: #7080b0;
+}
+
+.info-label {
+  color: #7080b0;
+  margin-right: 4px;
+}
+
+.info-value {
+  color: #e2e8f0;
+}
+
+/* 專業板塊樣式 */
+.teacher-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.info-section-label {
+  font-size: 12px;
+  color: #7080b0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.teacher-expertise-block {
+  background: rgba(4, 5, 9, 0.6);
+  border: 1px solid #16192b;
+  border-left: 3px solid #a855f7; /* 絕美導師紫邊條 */
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #a855f7;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* 卡片頁尾與按鈕 */
+.teacher-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #16192b;
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.secure-badge {
+  color: #00ff88;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.teacher-action-edit-btn {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #a855f7;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+}
+
+.teacher-action-edit-btn:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+  color: #ffffff;
+}
+
+/* 讀取狀態盒 */
+.explore-loading-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #7080b0;
+  font-size: 14px;
+  padding: 60px 0;
+}
+
+.explore-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

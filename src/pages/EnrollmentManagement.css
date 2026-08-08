@@ -1,0 +1,281 @@
+/* ==========================================================================
+   🌌 星際科幻風：選課調度中心 (Enrollment Management) 專屬高級特效樣式
+   ========================================================================== */
+
+.enroll-mgmt-container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.em-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.em-main-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.btn-refresh-em {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #c084fc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+.btn-refresh-em:hover {
+  background: #a855f7;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+}
+
+.em-subtitle {
+  color: #7080b0;
+  font-size: 13px;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #1e2640;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+.em-badge-role {
+  color: #e11d48;
+  font-weight: bold;
+  background: rgba(225, 29, 72, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(225, 29, 72, 0.2);
+}
+.em-badge-name {
+  color: #00f2fe;
+  font-weight: bold;
+}
+
+/* 🛠️ 管理員強制加選單面板 (水平排列) */
+.em-admin-form-box {
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(225, 29, 72, 0.2) !important; /* 管理員紅框警示 */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.em-form-title {
+  color: #e11d48;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.em-form-subtitle {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0 0 16px 0;
+}
+
+.em-horizontal-form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.em-input-field-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.em-input-field-group label {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+}
+.em-input-field-group input, .em-input-field-group select {
+  background: #05070f;
+  border: 1px solid #1e2640;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s;
+}
+.em-input-field-group input:focus, .em-input-field-group select:focus {
+  border-color: #e11d48;
+  box-shadow: 0 0 8px rgba(225, 29, 72, 0.2);
+}
+
+.em-btn-submit {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 38px;
+}
+.em-btn-submit:hover {
+  box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+  transform: translateY(-1px);
+}
+
+/* 🔍 中部多功能查詢過濾艙 */
+.em-search-bar-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.em-search-item {
+  background: #090d1a;
+  border: 1px solid #1e2640;
+  border-radius: 6px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+.em-search-item input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  font-size: 13px;
+  width: 100%;
+}
+.em-counter-text {
+  font-size: 13px;
+  color: #7080b0;
+}
+.em-counter-text strong {
+  color: #a855f7;
+}
+
+/* 📊 下半部高級數據表格 */
+.em-table-card-container {
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.em-table-wrapper-scroller {
+  overflow-x: auto;
+  border: 1px solid #1e2640;
+  border-radius: 8px;
+}
+
+.em-custom-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.em-custom-data-table th {
+  background-color: #05070f;
+  color: #a855f7; /* 預設紫色 */
+  font-weight: 700;
+  padding: 12px 16px;
+  border-bottom: 2px solid #1e2640;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.em-custom-data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+  color: #cbd5e1;
+  background-color: rgba(9, 13, 26, 0.2);
+}
+
+.em-custom-data-table tr:hover td {
+  background-color: rgba(30, 41, 59, 0.3);
+}
+
+.em-td-mono { font-family: monospace; color: #64748b; font-weight: bold; }
+.em-td-name { font-weight: bold; color: #ffffff; }
+.em-td-title { color: #e2e8f0; font-weight: 500; }
+
+/* 講師特製標籤 */
+.em-teacher-tag {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #94a3b8;
+}
+/* 💡 如果授課者是自己，則散發高亮青光 */
+.em-teacher-tag.tag-highlight-me {
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: #00f2fe;
+  text-shadow: 0 0 5px rgba(0, 242, 254, 0.4);
+}
+
+/* 💥 紅色刪除特權按鈕 */
+.em-btn-drop-action {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s;
+}
+.em-btn-drop-action:hover {
+  background: #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+/* 🔄 載入中動畫 */
+.em-table-loading {
+  text-align: center;
+  padding: 40px !important;
+  color: #a855f7;
+}
+.em-spinner {
+  animation: em-spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+@keyframes em-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.text-purple { color: #a855f7; }

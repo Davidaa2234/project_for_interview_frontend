@@ -1,0 +1,360 @@
+/* 🛸 星際中央控制艙外殼 */
+.sw-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  font-family: 'Courier New', Courier, monospace, system-ui;
+}
+
+.sw-cosmic-card {
+  background: rgba(13, 18, 35, 0.85); /* 帝國粒子護盾 */
+  border: 2px solid #a855f7; /* 紫色光劍磁場 */
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(0, 242, 254, 0.1);
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+}
+
+.sw-card-title {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+}
+
+.sw-card-subtitle {
+  color: #7080b0;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* 填表欄位元件 */
+.sw-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.sw-input-label {
+  font-size: 12px;
+  color: #00f2fe; /* 螢光藍光劍色 */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 0 5px rgba(0, 242, 254, 0.4);
+}
+
+.sw-input-field {
+  background-color: #05070f;
+  border: 1px solid #1e2640;
+  padding: 12px 16px;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.sw-input-field:focus {
+  border-color: #00f2fe;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4), inset 0 0 6px rgba(0, 242, 254, 0.2);
+}
+
+/* 🚀 充能推進按鈕 */
+.sw-btn-submit {
+  width: 100%;
+  background: rgba(168, 85, 247, 0.1);
+  color: #ffffff;
+  border: 2px solid #a855f7;
+  padding: 14px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
+  margin-top: 10px;
+}
+
+.sw-btn-submit:hover {
+  background: #a855f7;
+  color: #05070f;
+  box-shadow: 0 0 20px #a855f7;
+  text-shadow: none;
+}
+
+/* 🔗 跳轉提示文字 */
+.sw-redirect-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #7080b0;
+}
+
+.sw-redirect-link {
+  color: #00f2fe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sw-redirect-link:hover {
+  text-shadow: 0 0 5px #00f2fe;
+}
+
+/* 👤 個人檔案特有樣式 */
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px dashed #1e2640;
+}
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   🪐 會員檔案 Profile 深度視覺美化外掛
+   ========================================================================== */
+
+.profile-row-optimized {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #10121a;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #1e2235;
+}
+
+.profile-value-highlight {
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.profile-value-text {
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.profile-section-block {
+  background: #10121a;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #1e2235;
+  text-align: left;
+}
+
+.profile-block-content {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  background: #090a0f;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #161925;
+}
+
+.expertise-highlight {
+  color: #a855f7;
+  font-weight: 600;
+  border-left: 3px solid #a855f7;
+}
+
+/* 旋轉動畫 */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* ==========================================================================
+   🪐 彈出視窗（Modal）專用賽博龐克暗黑科技視覺樣式
+   ========================================================================== */
+
+/* 修改資料觸發按鈕 */
+.profile-edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.1) 0%, rgba(7, 11, 22, 0.4) 100%);
+  color: #00f2fe;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 0.5rem;
+}
+
+.profile-edit-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.25) 0%, rgba(0, 242, 254, 0.05) 100%);
+  border-color: #00f2fe;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.25);
+  transform: translateY(-1px);
+}
+
+/* 全域遮罩背景 */
+.cosmic-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 5, 9, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* 彈出視窗本體盒 */
+.cosmic-modal-window {
+  background-color: #0d0f17;
+  border: 1px solid #22263f;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+  animation: scaleUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+/* 視窗頭部 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #1a1d2f;
+}
+
+.modal-title-text {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-close-icon-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.modal-close-icon-btn:hover {
+  color: #ff0055;
+}
+
+/* 表單本體 */
+.modal-form-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modal-textarea {
+  resize: none;
+  line-height: 1.5;
+}
+
+/* 按鈕群組排版 */
+.modal-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.modal-btn-cancel {
+  background: transparent;
+  border: 1px solid #2e3456;
+  color: #94a3b8;
+  padding: 0.65rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.modal-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border-color: #475185;
+}
+
+.modal-btn-save {
+  background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+  border: none;
+  color: #050508;
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+  transition: all 0.2s;
+}
+
+.modal-btn-save:hover:not(:disabled) {
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.45);
+  transform: translateY(-1px);
+}
+
+.modal-btn-save:disabled {
+  background: #22263f;
+  color: #4b526d;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 🎬 動畫特徵定義 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
